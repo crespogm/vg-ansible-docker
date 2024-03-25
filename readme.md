@@ -13,7 +13,7 @@ localhost:8000
 En windows con WSL2 ingresar a:
 172.21.160.1:8000
 ```
-**Explorar otras soluciones de docker compose*
+**Explorar otras soluciones de docker compose**
 ```
 Descargar el repo de Awesome Docker config en otra carpeta
 https://github.com/docker/awesome-compose.git
