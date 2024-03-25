@@ -31,7 +31,7 @@
       - docker
   - name: Set up the stable repository
     apt_repository:
-      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
       state: present
       update_cache: yes
     tags:
@@ -69,14 +69,14 @@
     pip: name="{{ item }}"
     with_items:
       - docker
-  - name: Create a directory if it does not exist
-    ansible.builtin.file:
-      path: /usr/local/lib/docker/cli-plugins/docker-compose
-      state: directory
-      mode: '0755'
-    
-  - name: Install docker-compose
-    get_url: 
-      url: https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-linux-x86_64
-      dest: /usr/local/lib/docker/cli-plugins/docker-compose
-      mode: 0755
+#  - name: Create a directory if it does not exist
+#    ansible.builtin.file:
+#      path: /usr/local/lib/docker/cli-plugins/docker-compose
+#      state: directory
+#      mode: '0755'
+#    
+#  - name: Install docker-compose
+#    get_url: 
+#      url: https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-linux-x86_64
+#      dest: /usr/local/lib/docker/cli-plugins/docker-compose
+#      mode: 0755
